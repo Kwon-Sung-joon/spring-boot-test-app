@@ -1,0 +1,33 @@
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    defer-datasource-initialization: true
+  datasource: # 데이터베이스 정보 추가
+    url: jdbc:h2:mem:testdb
+    username: sa
+  h2: #H2 콘솔 활성화
+    console:
+      enabled: true
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 563483036077-q2d93ra8ctle48832tsnlqkil4tlvh0n.apps.googleusercontent.com
+            client-secret: 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
+            scope:
+              - email
+              - profile
+debug: false
+
+jwt:
+  issuer: kofdx7@gmail.com
+  secret_key: study-springboot
+
+
+
+
+
