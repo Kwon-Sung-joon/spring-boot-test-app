@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class UserViewController {
-    @GetMapping(value = {"/login", "/"})
+    @GetMapping(value = {"/login"})
     public String login(){
         return "oauthLogin";
     }
