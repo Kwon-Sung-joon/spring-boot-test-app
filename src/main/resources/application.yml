@@ -1,4 +1,7 @@
 spring:
+  #aws secretsmanager 사용
+  config:
+    import: 'aws-secretsmanager:spring/security/oatuh2/client/registration/google'
   jpa:
     show-sql: true
     properties:
@@ -16,8 +19,8 @@ spring:
       client:
         registration:
           google:
-            client-id: 563483036077-q2d93ra8ctle48832tsnlqkil4tlvh0n.apps.googleusercontent.com
-            client-secret: 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
+            client-id: ${client-id}
+            client-secret: ${client-secret}
             scope:
               - email
               - profile
@@ -26,8 +29,3 @@ debug: false
 jwt:
   issuer: kofdx7@gmail.com
   secret_key: study-springboot
-
-
-
-
-
